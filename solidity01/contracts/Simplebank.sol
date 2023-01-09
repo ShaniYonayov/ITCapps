@@ -2,12 +2,12 @@
 pragma solidity >=0.4.22 <0.9.0;
  
 contract Simplebank {
-   address[] public funders;
-   uint[] public funds;
+   address[] public funders;//משתנה שמכיל כתובות
+   uint[] public funds;//משתנה אינטגר
    
    function addFunds() external payable {
-        funders.push(msg.sender);
-        funds.push(msg.value);
+        funders.push(msg.sender);//שומר את הכתובות, מי שלח תכסף
+        funds.push(msg.value);//שומר את הסכום ששלח
    }
 
 }
