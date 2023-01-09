@@ -2,14 +2,14 @@
 pragma solidity >=0.4.22 <0.9.0;
  
 contract Simplebank {
+   address[] public funders;
+   uint[] public funds;
    
-
    function addFunds() external payable {
         funders.push(msg.sender);
-        amounts.push(msg.value);
+        funds.push(msg.value);
    }
-   address[] public funders;
-   uint[] public amounts;
+
 }
 
 
